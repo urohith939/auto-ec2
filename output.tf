@@ -9,3 +9,7 @@ output "elastic_ip" {
   value = aws_eip.demo-eip.public_ip
 }
 
+output "ssh_key_file_name" {
+  value = local_file.ssh_key.filename
+}
+
