@@ -40,7 +40,7 @@ smtp_port = 587  # Gmail SMTP port
 username = "urohithnarasimha.1si19ec111@gmail.com"
 password = "sahhndrskgzkzbir"
 
-recipient_list = [urohithnarasimha@gmail.com,rohithnarasimha2001@gmail.com]
+recipient_list = ["urohithnarasimha@gmail.com", "rohithnarasimha2001@gmail.com"]
 
 for receiver_email in recipient_list:
     # Create the email message
