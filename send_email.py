@@ -5,6 +5,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email.mime.application import MIMEApplication
+import os
 
 # Run 'terraform output' and capture the output
 try:
@@ -37,8 +38,8 @@ EC2 public IP is {ec2_instance_public_ip}
 Thank you"""
 smtp_server = "smtp.gmail.com"
 smtp_port = 587  # Gmail SMTP port
-username = "urohithnarasimha.1si19ec111@gmail.com"
-password = "sahhndrskgzkzbir"
+username = os.environ.get("SMTP_USERNAME")
+password = os.environ.get("SMTP_PASSWORD")
 
 recipient_list = ["urohithnarasimha@gmail.com", "rohithnarasimha2001@gmail.com"]
 
