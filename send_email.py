@@ -26,7 +26,7 @@ for line in output_lines:
     elif key == "ec2_instance_public_ip":
         ec2_instance_public_ip = value
     elif key == "ssh_key_file_name":
-        ssh_key_file_name = value 
+        ssh_key_file_name = value.strip('"\'')
 
 sender_email = "urohithnarasimha.1si19ec111@gmail.com"
 subject = "Instance detail"
